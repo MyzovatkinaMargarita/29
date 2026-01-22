@@ -8,3 +8,14 @@ import TimerBox from "../../components/tests/TimerBox";
   }}
 />
 
+{questions.map((q, i) => (
+  <QuestionBlock
+    key={q.id}
+    index={i}
+    question={q}
+    value={answers[q.id]?.value ?? null}
+    onChange={handleAnswerChange}
+  />
+))}
+
+
